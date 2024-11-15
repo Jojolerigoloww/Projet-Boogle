@@ -10,9 +10,9 @@ namespace Projet_Boogle
     {
         private string nom;
         private int score;
-        private string[] mots;
+        private List<string> mots;
 
-        public Joueur(string nom1, int score1, string[] mots1)
+        public Joueur(string nom1, int score1, List<string> mots1)
         {
             this.nom = nom1;
             this.score = score1;
@@ -22,16 +22,22 @@ namespace Projet_Boogle
         public bool Contain(string mot)
         {
             bool b = false;
-            for (int i = 0; i < mots.Length; i++)
+            for (int i = 0; i < mots.Count; i++)
             {
                 if (mot == mots[i]) { b = true; break; }
             }
-            return b;
+            return b; 
         }
 
         public void Add_Mot(string mot)
         {
+            mots.Add(mot);
+        }
 
+        public string toString() 
+        {
+            string texte = "Le joueur " + nom + " a un score de : " + score;
+            return texte;
         }
     }
 }

@@ -13,20 +13,19 @@ namespace Projet_Boogle
         {
             try
             {
-                string path = @"C:\Users\basti\Documents\A2\Algo\Lettres.txt";
+                string path = @"C:\Users\basti\Documents\A2\Algo\Projet Boogle\Lettres.txt";
                 using (StreamReader sr = new StreamReader(path))
                 {
                     string line;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        Console.WriteLine(line);
-                    }
+                    
                 }
             }
             catch (Exception e) 
             {
                 Console.WriteLine("L'erreur suivante s'est produite : " + e.Message);
             }
+
+            
             Console.ReadLine();
         }
     }
