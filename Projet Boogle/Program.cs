@@ -11,21 +11,8 @@ namespace Projet_Boogle
     {
         static void Main(string[] args)
         {
-            try
-            {
-                string path = @"C:\Users\basti\Documents\A2\Algo\Projet Boogle\Lettres.txt";
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    string line;
-                    
-                }
-            }
-            catch (Exception e) 
-            {
-                Console.WriteLine("L'erreur suivante s'est produite : " + e.Message);
-            }
-
-            
+            Dictionnaire francais = new Dictionnaire("EN");
+            francais.lecture();
             Console.ReadLine();
         }
     }
