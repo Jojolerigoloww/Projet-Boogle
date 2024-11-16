@@ -1,0 +1,24 @@
+internal class De
+{
+    char[] faces;
+    char facevisible;
+
+    public De(char[] faces)
+    {
+        if(faces.Length != 6) 
+        {
+            Console.WriteLine("Un dé contient exactement 6 faces");
+        }         
+        else
+        {
+            this.faces = faces;
+        }
+        
+        
+        
+    }
+    
+
+        
+
+}
