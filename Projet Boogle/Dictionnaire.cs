@@ -16,14 +16,14 @@ namespace Projet_Boogle
         public Dictionnaire(string langue1)
         {
             this.langue = langue1;
-        }
+        }        
 
         public List<string> lecture()
         {
-            List<string> list = new List<string>();
+            List<string> dictionnaire = new List<string>();
             string path = "";
-            if (langue == "FR") { path = @"C:\Users\basti\Documents\A2\Algo\Projet Boogle\MotsPossiblesFR.txt"; }
-            else if (langue == "EN") { path = @"C:\Users\basti\Documents\A2\Algo\Projet Boogle\MotsPossiblesEN.txt"; }
+            if (langue == "FR") { path = @"MotsPossiblesFR.txt"; }
+            else if (langue == "EN") { path = @"MotsPossiblesEN.txt"; }
             else { return null; }
             using (StreamReader sr = new StreamReader(path))
             {
@@ -32,14 +32,23 @@ namespace Projet_Boogle
                 {
                     char[] charsToTrim = { ' ' };
                     string[] words = line.Split();
-                    foreach (string word in words)
-                        list.Add(word.TrimEnd(charsToTrim));
+                    foreach (string word in words) 
+                    { 
+                        dictionnaire.Add(word.TrimEnd(charsToTrim));
+                        Console.WriteLine(word);
+                    }          
                 }
-
             }
-            foreach (string word in list) {Console.WriteLine(word); }
-            return list;
+            return dictionnaire;
         }
         
+        //denjneiuvnriuv
+
+        /*public string toString()
+        {
+            List<string> description = new List<string>();
+            description = Dictionnaire.lecture();
+        }*/
+
     }
 }

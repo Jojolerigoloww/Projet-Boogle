@@ -11,7 +11,7 @@ namespace Projet_Boogle
     {
         static void Main(string[] args)
         {
-            Dictionnaire francais = new Dictionnaire("EN");
+            Dictionnaire francais = new Dictionnaire("FR");
             francais.lecture();
             Console.ReadLine();
         }
